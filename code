@@ -1,0 +1,40 @@
+# import zstd library for zstandard simple api access and Compress
+
+
+import os
+import time
+
+import zstd
+
+def main():
+  #determine size of input file
+    sizeinfo_if = os.stat('sai.txt')
+    print('Size of input file is :',sizeinfo_if.st_size,'Bytes')
+
+ #make sure zstd is installed and running
+    ver = zstd.__version__;
+    print('Zstd version : ',ver)
+
+ #File for already existing(or newly created ) output file where the compressed data needs to be written
+    fh_output = open('output.zstd','wb')
+
+ #Zstd compressor object creation
+    cctx = zstd.ZstdCompressor()
+    initial_timestamp = time.time()
+
+#Get byte sized chucks from in File, compress and write to out file
+    with open('sai.txt', 'rb') as fh_input:
+       byte_chunk = fh_input.read(1)
+       while byte_chunk:
+          #bdata=bytes(str.encode(byte_chunk))
+           compressed = cctx.compress(byte_chunk)
+           with cctx.write_to(fh_output) as compressor:
+                compressor.write(byte_chunk)
+                byte_chunk = fh_input.read(1)
+    end_timestamp = time.time()
+
+    print('Time taken to compress:',end_timestamp - initial_timestamp)
+    sizeinfo_of = os.stat('output.zstd')
+    print('Size of output File is:',sizeinfo_of.st_size,'Bytes')
+
+    main()
