@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+zstd -b1 -r seg13
+zstd --train -r seg13
+zstd -b1 -r seg13 -D dictionary
+
