@@ -1,0 +1,78 @@
+
+
+
+{TIME, COMPRESSED SIZE}
+
+ZSTD_DICT
+9> benchmark:time_zstd_dict(S).
+{569657,1561979}
+10> benchmark:time_zstd_dict(S).
+{576175,1561979}
+11> benchmark:time_zstd_dict(S).
+{581517,1561979}
+12> benchmark:time_zstd_dict(S).
+{572020,1561979}
+13> benchmark:time_zstd_dict(S).
+{575228,1561979}
+14> benchmark:time_zstd_dict(S).
+{576382,1561979}
+15> benchmark:time_zstd_dict(S).
+{571583,1561979}
+16> benchmark:time_zstd_dict(S).
+{570209,1561979}
+17> benchmark:time_zstd_dict(S).
+{572009,1561979}
+18> benchmark:time_zstd_dict(S).
+{575101,1561979}
+
+
+ZLIB
+19> benchmark:time_zlib(S).
+{1522435,7120949}
+20> benchmark:time_zlib(S).
+{1510632,7120949}
+21> benchmark:time_zlib(S).
+{1511830,7120949}
+22> benchmark:time_zlib(S).
+{1527507,7120949}
+23> benchmark:time_zlib(S).
+{1519454,7120949}
+24> benchmark:time_zlib(S).
+{1526864,7120949}
+25> benchmark:time_zlib(S).
+{1515349,7120949}
+26> benchmark:time_zlib(S).
+{1524296,7120949}
+27> benchmark:time_zlib(S).
+{1524911,7120949}
+28> benchmark:time_zlib(S).
+{1556376,7120949}
+29> benchmark:time_zlib(S).
+{1656210,7120949}
+
+
+
+
+ZSTD
+30> benchmark:time_zstd(S).
+{778561,7715086}
+31> benchmark:time_zstd(S).
+{799849,7715086}
+32> benchmark:time_zstd(S).
+{795192,7715086}
+33> benchmark:time_zstd(S).
+{868569,7715086}
+34> benchmark:time_zstd(S).
+{908839,7715086}
+35> benchmark:time_zstd(S).
+{864940,7715086}
+36> benchmark:time_zstd(S).
+{883367,7715086}
+37> benchmark:time_zstd(S).
+{848410,7715086}
+38> benchmark:time_zstd(S).
+{864097,7715086}
+39> benchmark:time_zstd(S).
+{865492,7715086}
+40> benchmark:time_zstd(S).
+{874343,7715086}
